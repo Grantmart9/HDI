@@ -177,39 +177,42 @@ const HDI_detail = () => {
 
 const HDI = () => {
   return (
-    <div
-      className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-      style={{ position: "absolute", top: "830px", marginBottom: "10pt" }}
-    >
-      <div className="p-2 shadow-md text-gray-light grid grid-flow-row gap-1">
-        <div className="text-left my-auto grid grid-flow-col">
-          <img className="rounded-md" src={Brain} width={"30%"} />A Long and
-          Healthy Life is measured using life expectancy at birth. Measure of
-          America calculates life expectancy using mortality data from the New
-          Jersey Department of Health and population data from the US Census
-          Bureau. For estimates for the Newark population as a whole as well as
-          for all gender, nativity, and race/ethnicity combinations, we used
-          2017–2021 mortality data from the New Jersey Department of Health. For
-          census tracts, we used CDC/USALEEP life expectancy estimates.
-        </div>
-        <div className="text-left my-auto grid grid-flow-col">
-          <img className="rounded-md" src={Dollar} width={"30%"} />
-          Access to Knowledge is measured using two indicators: school
-          enrollment for the population 3 to 24 years of age and educational
-          degree attainment for those ages 25 and older. A one-third weight is
-          applied to the enrollment indicator and a two-thirds weight to the
-          degree attainment indicator to reflect the relative importance of
-          earning degrees as compared to attending school. Both are from the US
-          Census Bureau’s 2018–2022 American Community Survey
-        </div>
-        <div className="text-left my-auto grid grid-flow-col">
-          <img className="rounded-md" src={Health} width={"16%"} />A Decent
-          Standard of Living is measured using median earnings of all full- and
-          part-time workers ages 16 and older from the same 2018–2022 American
-          Community Survey.
+    <Fade in={true} timeout={1400}>
+      <div
+        className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
+        style={{ position: "absolute", top: "830px", marginBottom: "10pt" }}
+      >
+        <div className="p-2 shadow-md text-gray-light grid grid-flow-row gap-1">
+          <div className="text-left my-auto grid grid-flow-col">
+            <img className="rounded-md" src={Brain} width={"30%"} />A Long and
+            Healthy Life is measured using life expectancy at birth. Measure of
+            America calculates life expectancy using mortality data from the New
+            Jersey Department of Health and population data from the US Census
+            Bureau. For estimates for the Newark population as a whole as well
+            as for all gender, nativity, and race/ethnicity combinations, we
+            used 2017–2021 mortality data from the New Jersey Department of
+            Health. For census tracts, we used CDC/USALEEP life expectancy
+            estimates.
+          </div>
+          <div className="text-left my-auto grid grid-flow-col">
+            <img className="rounded-md" src={Dollar} width={"30%"} />
+            Access to Knowledge is measured using two indicators: school
+            enrollment for the population 3 to 24 years of age and educational
+            degree attainment for those ages 25 and older. A one-third weight is
+            applied to the enrollment indicator and a two-thirds weight to the
+            degree attainment indicator to reflect the relative importance of
+            earning degrees as compared to attending school. Both are from the
+            US Census Bureau’s 2018–2022 American Community Survey
+          </div>
+          <div className="text-left my-auto grid grid-flow-col">
+            <img className="rounded-md" src={Health} width={"16%"} />A Decent
+            Standard of Living is measured using median earnings of all full-
+            and part-time workers ages 16 and older from the same 2018–2022
+            American Community Survey.
+          </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
@@ -219,58 +222,61 @@ export const QOL = () => {
 
   const Reg = () => {
     return (
-      <div>
-        <div
-          className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-          style={{ position: "absolute", top: "120px", marginBottom: "10pt" }}
-        >
-          <div className="p-2 text-gray-light grid grid-cols-2 gap-1">
-            <p className="text-center my-auto">
-              Trying to measure all the facets of the expansive concepts of
-              human development would be madness. Thus, the United Nations Human
-              Development Index as well as the adapted American Human
-              Development Index featured in this report measure just three
-              fundamental capabilities: a long and healthy life, access to
-              knowledge, and a decent standard of living (see FIGURE 1). Why
-              only three areas, and why these three in particular? People around
-              the world view them as core building blocks of a life of value,
-              freedom, and dignity. Healthy lives, good educations, and decent
-              wages are not controversial aims. In addition, these foundational
-              capabilities make possible other capabilities, such as adequate
-              housing in safe neighborhoods. They are also bedrocks of human
-              security. And from a practical perspective, these are areas that
-              one can measure comparatively easily with reliable and regularly
-              collected proxy indicators. It is tempting to include indicators
-              of a host of important capabilities—such as adequate, affordable
-              housing, food security, and political participation—in a well-
-              being index. Indexes with large numbers of indicators can be
-              tricky, however. Using many indicators can lead to counting the
-              same phenomenon two or three times, to confusing results, and to a
-              false equivalence between fundamental and derivative issues. A
-              housing indicator, for instance, may be counting the same thing,
-              to a large degree, as an earnings indicator—how much money a
-              person has to pay for life’s essentials. Indexes that include a
-              large number of indicators can be difficult to explain and
-              understand, diluting their advocacy power. And including many
-              indicators can limit the places and demographic groups for which
-              unique scores can be calculated. It is important, however, to be
-              realistic about the limitations of a parsimonious index like this
-              one. The American Human Development Index is not the end of a
-              discussion on well-being; it is the start. Once disparities in
-              basic outcomes have been identified using the index and its
-              constituent parts, the critical task is to examine the why—the
-              underlying conditions like power disparities, historical
-              realities, past and present policy choices, and more that have led
-              to different outcomes for different groups of people. For this
-              exploration, a whole host of other indicators is required—
-              indicators that are featured throughout the report.
-            </p>
-            <div className="flex align-center justify-center">
-              <img className="rounded-md mt-3" src={HDI2} width={"50%"} />
+      <Fade in={true} timeout={1000}>
+        <div>
+          <div
+            className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
+            style={{ position: "absolute", top: "120px", marginBottom: "10pt" }}
+          >
+            <div className="p-2 text-gray-light grid grid-cols-2 gap-1">
+              <p className="text-center my-auto">
+                Trying to measure all the facets of the expansive concepts of
+                human development would be madness. Thus, the United Nations
+                Human Development Index as well as the adapted American Human
+                Development Index featured in this report measure just three
+                fundamental capabilities: a long and healthy life, access to
+                knowledge, and a decent standard of living (see FIGURE 1). Why
+                only three areas, and why these three in particular? People
+                around the world view them as core building blocks of a life of
+                value, freedom, and dignity. Healthy lives, good educations, and
+                decent wages are not controversial aims. In addition, these
+                foundational capabilities make possible other capabilities, such
+                as adequate housing in safe neighborhoods. They are also
+                bedrocks of human security. And from a practical perspective,
+                these are areas that one can measure comparatively easily with
+                reliable and regularly collected proxy indicators. It is
+                tempting to include indicators of a host of important
+                capabilities—such as adequate, affordable housing, food
+                security, and political participation—in a well- being index.
+                Indexes with large numbers of indicators can be tricky, however.
+                Using many indicators can lead to counting the same phenomenon
+                two or three times, to confusing results, and to a false
+                equivalence between fundamental and derivative issues. A housing
+                indicator, for instance, may be counting the same thing, to a
+                large degree, as an earnings indicator—how much money a person
+                has to pay for life’s essentials. Indexes that include a large
+                number of indicators can be difficult to explain and understand,
+                diluting their advocacy power. And including many indicators can
+                limit the places and demographic groups for which unique scores
+                can be calculated. It is important, however, to be realistic
+                about the limitations of a parsimonious index like this one. The
+                American Human Development Index is not the end of a discussion
+                on well-being; it is the start. Once disparities in basic
+                outcomes have been identified using the index and its
+                constituent parts, the critical task is to examine the why—the
+                underlying conditions like power disparities, historical
+                realities, past and present policy choices, and more that have
+                led to different outcomes for different groups of people. For
+                this exploration, a whole host of other indicators is required—
+                indicators that are featured throughout the report.
+              </p>
+              <div className="flex align-center justify-center">
+                <img className="rounded-md mt-3" src={HDI2} width={"50%"} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Fade>
     );
   };
 
