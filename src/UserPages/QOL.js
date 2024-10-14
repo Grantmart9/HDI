@@ -5,6 +5,7 @@ import Dollar from "Images/dollar.png";
 import Health from "Images/health.png";
 import Moment from "moment";
 import HDI2 from "Images/HDI3.png";
+import Fade from "@mui/material/Fade";
 
 const HDI_groups_2 = () => {
   return (
@@ -221,12 +222,8 @@ export const QOL = () => {
       <div>
         <div
           className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-          style={{ position: "absolute", top: "65px", marginBottom: "10pt" }}
+          style={{ position: "absolute", top: "120px", marginBottom: "10pt" }}
         >
-          <div className="p-2  text-gray-light text-center font-bold text-xl">
-            Quality Of Life
-          </div>
-
           <div className="p-2 text-gray-light grid grid-cols-2 gap-1">
             <p className="text-center my-auto">
               Trying to measure all the facets of the expansive concepts of
@@ -278,15 +275,22 @@ export const QOL = () => {
   };
 
   return (
-    <div
-      style={{ backgroundColor: "#bfbfbf" }}
-      className="rounded-t-md rounded-b-md"
-    >
-      <Reg />
-      <HDI />
-      <HDI_detail />
-      <HDI_Groups />
-      <HDI_groups_2 />
+    <div>
+      <Fade in={true} timeout={1000}>
+        <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
+          Quality Of Life
+        </h1>
+      </Fade>
+      <div
+        style={{ backgroundColor: "#bfbfbf" }}
+        className="rounded-t-md rounded-b-md"
+      >
+        <Reg />
+        <HDI />
+        <HDI_detail />
+        <HDI_Groups />
+        <HDI_groups_2 />
+      </div>
     </div>
   );
 };

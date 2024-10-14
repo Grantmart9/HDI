@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { Fade } from "@mui/material";
 
-export const Report =()=>{
+export const Report = () => {
   return (
-    <div
-      style={{ backgroundColor: "#bfbfbf" }}
-      className="rounded-t-md rounded-b-md"
-    >
-     <div className="flex text-center justify-center mt-16"> Report Page</div>
+    <div>
+      <Fade in={true} timeout={1000}>
+        <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
+          Report
+        </h1>
+      </Fade>
     </div>
   );
 };
