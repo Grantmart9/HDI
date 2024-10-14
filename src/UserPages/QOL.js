@@ -224,7 +224,7 @@ export const QOL = () => {
           style={{ position: "absolute", top: "65px", marginBottom: "10pt" }}
         >
           <div className="p-2  text-gray-light text-center font-bold text-xl">
-            What is human development
+            Quality Of Life
           </div>
 
           <div className="p-2 text-gray-light grid grid-cols-2 gap-1">
