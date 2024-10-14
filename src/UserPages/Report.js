@@ -6,7 +6,7 @@ export const Report =()=>{
       style={{ backgroundColor: "#bfbfbf" }}
       className="rounded-t-md rounded-b-md"
     >
-      Report Page
+     <div className="flex text-center justify-center mt-16"> Report Page</div>
     </div>
   );
 };
