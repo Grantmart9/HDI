@@ -3,20 +3,33 @@ import { Size } from "media-query";
 import Brain from "Images/brain.png";
 import Dollar from "Images/dollar.png";
 import Health from "Images/health.png";
-import Moment from "moment";
 import HDI2 from "Images/HDI3.png";
 import Fade from "@mui/material/Fade";
 import { Card } from "primereact/card";
+import {
+  cardbgcolor,
+  textcolor,
+  pagetitlecolor,
+  cardtitlecolor,
+  pagebgcolor,
+  fontType,
+} from "components/Display/feutures";
 
 const HDI_groups_2 = () => {
   return (
     <div>
-      <Card className="p-2 shadow-md">
-        <div className="text-gray-dark text-center font-bold text-xl mb-1">
+      <Card style={{ backgroundColor: cardbgcolor }} className="p-2 shadow-md">
+        <div
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className=" text-center font-bold text-xl mb-1"
+        >
           Why the American Human Development Index?
         </div>
         <div className="p-2 shadow-md">
-          <p className="mb-2 text-left text-gray-dark">
+          <p
+            style={{ color: textcolor, fontFamily: fontType }}
+            className="mb-2 text-left "
+          >
             Dashboards and indexes that seek to capture and quantify concepts of
             well-being, mobility, inclusion, equity, prosperity, security, and
             sustainability are thick on the ground. What does the American Human
@@ -28,7 +41,10 @@ const HDI_groups_2 = () => {
             but they fail to capture the often-stark differences between men and
             women, racial and ethnic groups, and cities and neighborhoods.
           </p>
-          <p className="mb-2 text-left text-gray-dark">
+          <p
+            style={{ color: cardtitlecolor, fontFamily: fontType }}
+            className="mb-2 text-left "
+          >
             Looking only at Essex County data, for example, might lead us to
             assume that the countywide figure of 37.4 percent of adults age 25
             and older with at least a bachelor’s degree applies to Newark as
@@ -44,7 +60,10 @@ const HDI_groups_2 = () => {
             organizations today are seeking to apply an equity lens to their
             work; the HDI is such a lens.
           </p>
-          <p className="mb-2 text-left text-gray-dark">
+          <p
+            style={{ color: cardtitlecolor, fontFamily: fontType }}
+            className="mb-2 text-left "
+          >
             The components that make up the index—living a long and healthy
             life, getting a good education, and earning a decent wage—are not
             controversial aims. They are universally valued, intuitively
@@ -59,7 +78,10 @@ const HDI_groups_2 = () => {
             earn the most ($50,600), have the best life outcomes. While that may
             be true economically, it is not true in terms of health.{" "}
           </p>
-          <p className="mb-2 text-left text-gray-dark">
+          <p
+            style={{ color: cardtitlecolor, fontFamily: fontType }}
+            className="mb-2 text-left "
+          >
             Latina women, who earn less than half what white men do, can expect
             to live 84.0 years, 4.5 more than white men. Similarly, Asian Newark
             residents, who earn far less than white men, live 11.9 years longer.
@@ -76,7 +98,10 @@ const HDI_groups_2 = () => {
             which all people are able to imagine and attain the kind of life
             they value.
           </p>
-          <p className="text-left text-gray-dark">
+          <p
+            style={{ color: cardtitlecolor, fontFamily: fontType }}
+            className="text-left "
+          >
             The rich engagement of scholars from a range of disciplines from all
             corners of the earth in creating, exploring, researching, and
             building upon the HDI sets it apart from other well-being exercises.
@@ -97,11 +122,17 @@ const HDI_groups_2 = () => {
 const HDI_Groups = () => {
   return (
     <div>
-      <Card className="p-2 shadow-md">
-        <div className=" text-gray-dark text-center font-bold text-xl mb-1">
+      <Card style={{ backgroundColor: cardbgcolor }} className="p-2 shadow-md">
+        <div
+          style={{ color: cardtitlecolor }}
+          className="text-center font-bold text-xl mb-1"
+        >
           Why Don’t All Groups and Places Have an HDI Score?
         </div>
-        <p className="mb-2 text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="mb-2 text-left "
+        >
           You will notice that on some maps, specific areas appear in gray, and
           that in some tables, values for certain groups or locales are missing.
           Gray areas and missing values indicate that the data for that place or
@@ -112,7 +143,10 @@ const HDI_Groups = () => {
           just the most recent year improves timeliness but makes it impossible
           to calculate rates for small populations.
         </p>
-        <p className="mb-2 text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="mb-2 text-left "
+        >
           It’s a trade-off, and we generally err on the side of granularity.
           Ideally, we would be able to provide scores not just for large
           demographic groups like Black and white Newark residents, but also for
@@ -125,7 +159,10 @@ const HDI_Groups = () => {
           everyone an HDI score stems from the way in which the data we use for
           the index are collected.
         </p>
-        <p className="mb-2 text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="mb-2 text-left "
+        >
           We would like, for example, to calculate scores for LGBTQ residents,
           but are unable to do so because the American Community Survey does not
           provide a way for people to report information about their sexual and
@@ -135,7 +172,10 @@ const HDI_Groups = () => {
           foster care system, people who are homeless, or people who have been
           incarcerated, is also impossible.
         </p>
-        <p className="text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="text-left "
+        >
           We try to address these gaps by bringing in other data sources but
           understand that this is not ideal. In short, we can only calculate
           scores for groups that are given the chance to self-identify on the
@@ -154,8 +194,11 @@ const HDI_Groups = () => {
 const HDI_detail = () => {
   return (
     <div>
-      <Card className="p-2 shadow-md">
-        <p className="mb-2 text-left text-gray-dark">
+      <Card style={{ backgroundColor: cardbgcolor }} className="p-2 shadow-md">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="mb-2 text-left "
+        >
           The three components are weighted equally on the premise that each is
           equally important for human well-being. In broad terms, the first
           steps for calculating the index are to compile or calculate the four
@@ -164,7 +207,10 @@ const HDI_detail = () => {
           these indicators use different scales (years, dollars, percentages),
           they must be put on a common scale so that they can be combined.
         </p>
-        <p className="mb-2 text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="mb-2 text-left "
+        >
           Three subindexes, one for each of the three dimensions that make up
           the index—health, education, and earnings—are created on a scale of 0
           to 10. The process requires the selection of minimum and maximum
@@ -174,7 +220,10 @@ const HDI_detail = () => {
           years to come. For life expectancy, for example, the goalposts are 90
           years at the high end and 66 years at the low end.
         </p>
-        <p className="text-left text-gray-dark">
+        <p
+          style={{ color: cardtitlecolor, fontFamily: fontType }}
+          className="text-left "
+        >
           The three subindexes are then added together and divided by three to
           yield the American Human Development Index value. (A more detailed
           technical description can be found in the Methodological Note). In
@@ -199,8 +248,14 @@ const HDI = () => {
     <Fade in={true} timeout={1400}>
       {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
         <div>
-          <Card className="p-2 shadow-md">
-            <p className="text-left my-auto flex text-gray-dark mb-2">
+          <Card
+            style={{ backgroundColor: cardbgcolor }}
+            className="p-2 shadow-md"
+          >
+            <p
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto flex mb-2"
+            >
               A Long and Healthy Life is measured using life expectancy at
               birth. Measure of America calculates life expectancy using
               mortality data from the New Jersey Department of Health and
@@ -210,7 +265,10 @@ const HDI = () => {
               from the New Jersey Department of Health. For census tracts, we
               used CDC/USALEEP life expectancy estimates.
             </p>
-            <p className="text-left my-auto flex text-gray-dark mb-2">
+            <p
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto flex mb-2"
+            >
               Access to Knowledge is measured using two indicators: school
               enrollment for the population 3 to 24 years of age and educational
               degree attainment for those ages 25 and older. A one-third weight
@@ -219,7 +277,10 @@ const HDI = () => {
               of earning degrees as compared to attending school. Both are from
               the US Census Bureau’s 2018–2022 American Community Survey
             </p>
-            <p className="text-left my-auto flex text-gray-dark">
+            <p
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto flex "
+            >
               A Decent Standard of Living is measured using median earnings of
               all full- and part-time workers ages 16 and older from the same
               2018–2022 American Community Survey.
@@ -228,8 +289,14 @@ const HDI = () => {
         </div>
       ) : (
         <div>
-          <Card className="p-2 shadow-md text-gray-light">
-            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+          <Card
+            style={{ backgroundColor: cardbgcolor }}
+            className="p-2 shadow-md text-gray-light"
+          >
+            <div
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto grid grid-flow-col "
+            >
               <img className="rounded-md" src={Brain} width={"30%"} />A Long and
               Healthy Life is measured using life expectancy at birth. Measure
               of America calculates life expectancy using mortality data from
@@ -240,7 +307,10 @@ const HDI = () => {
               Department of Health. For census tracts, we used CDC/USALEEP life
               expectancy estimates.
             </div>
-            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+            <div
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto grid grid-flow-col "
+            >
               <img className="rounded-md" src={Dollar} width={"30%"} />
               Access to Knowledge is measured using two indicators: school
               enrollment for the population 3 to 24 years of age and educational
@@ -250,7 +320,10 @@ const HDI = () => {
               of earning degrees as compared to attending school. Both are from
               the US Census Bureau’s 2018–2022 American Community Survey
             </div>
-            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+            <div
+              style={{ color: cardtitlecolor, fontFamily: fontType }}
+              className="text-left my-auto grid grid-flow-col "
+            >
               <img className="rounded-md " src={Health} width={"16%"} />A Decent
               Standard of Living is measured using median earnings of all full-
               and part-time workers ages 16 and older from the same 2018–2022
@@ -271,9 +344,15 @@ export const QOL = () => {
       <div>
         <Fade in={true} timeout={1000}>
           {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
-            <div className="p-2 shadow-md">
-              <Card>
-                <p className="mb-2 text-left text-gray-dark p-2">
+            <div
+              style={{ backgroundColor: cardbgcolor }}
+              className="p-2 shadow-md"
+            >
+              <Card style={{ backgroundColor: cardbgcolor }}>
+                <p
+                  style={{ color: cardtitlecolor, fontFamily: fontType }}
+                  className="mb-2 text-left p-2"
+                >
                   Trying to measure all the facets of the expansive concepts of
                   human development would be madness. Thus, the United Nations
                   Human Development Index as well as the adapted American Human
@@ -284,7 +363,10 @@ export const QOL = () => {
                   around the world view them as core building blocks of a life
                   of value, freedom, and dignity.
                 </p>
-                <p className="mb-2 text-left text-gray-dark p-2">
+                <p
+                  style={{ color: cardtitlecolor, fontFamily: fontType }}
+                  className="mb-2 text-left  p-2"
+                >
                   Healthy lives, good educations, and decent wages are not
                   controversial aims. In addition, these foundational
                   capabilities make possible other capabilities, such as
@@ -297,7 +379,10 @@ export const QOL = () => {
                   participation—in a well- being index. Indexes with large
                   numbers of indicators can be tricky, however.
                 </p>
-                <p className="mb-2 text-left text-gray-dark p-2">
+                <p
+                  style={{ color: cardtitlecolor, fontFamily: fontType }}
+                  className="mb-2 text-left p-2"
+                >
                   Using many indicators can lead to counting the same phenomenon
                   two or three times, to confusing results, and to a false
                   equivalence between fundamental and derivative issues. A
@@ -309,7 +394,10 @@ export const QOL = () => {
                   including many indicators can limit the places and demographic
                   groups for which unique scores can be calculated.
                 </p>
-                <p className="text-left text-gray-dark p-2">
+                <p
+                  style={{ color: cardtitlecolor, fontFamily: fontType }}
+                  className="text-left p-2"
+                >
                   It is important, however, to be realistic about the
                   limitations of a parsimonious index like this one. The
                   American Human Development Index is not the end of a
@@ -330,10 +418,13 @@ export const QOL = () => {
             </div>
           ) : (
             <div>
-              <Card>
+              <Card style={{ backgroundColor: cardbgcolor }}>
                 <div className="grid grid-flow-col gap-2">
                   <div>
-                    <p className="mb-2 text-left text-gray-dark p-2">
+                    <p
+                      style={{ color: cardtitlecolor, fontFamily: fontType }}
+                      className="mb-2 text-left  p-2"
+                    >
                       Trying to measure all the facets of the expansive concepts
                       of human development would be madness. Thus, the United
                       Nations Human Development Index as well as the adapted
@@ -345,7 +436,10 @@ export const QOL = () => {
                       them as core building blocks of a life of value, freedom,
                       and dignity.
                     </p>
-                    <p className="mb-2 text-left text-gray-dark p-2">
+                    <p
+                      style={{ color: cardtitlecolor, fontFamily: fontType }}
+                      className="mb-2 text-left  p-2"
+                    >
                       Healthy lives, good educations, and decent wages are not
                       controversial aims. In addition, these foundational
                       capabilities make possible other capabilities, such as
@@ -359,7 +453,10 @@ export const QOL = () => {
                       participation—in a well- being index. Indexes with large
                       numbers of indicators can be tricky, however.
                     </p>
-                    <p className="mb-2 text-left text-gray-dark p-2">
+                    <p
+                      style={{ color: cardtitlecolor, fontFamily: fontType }}
+                      className="mb-2 text-left p-2"
+                    >
                       Using many indicators can lead to counting the same
                       phenomenon two or three times, to confusing results, and
                       to a false equivalence between fundamental and derivative
@@ -372,7 +469,10 @@ export const QOL = () => {
                       indicators can limit the places and demographic groups for
                       which unique scores can be calculated.
                     </p>
-                    <p className="text-left text-gray-dark p-2">
+                    <p
+                      style={{ color: cardtitlecolor, fontFamily: fontType }}
+                      className="text-left p-2"
+                    >
                       It is important, however, to be realistic about the
                       limitations of a parsimonious index like this one. The
                       American Human Development Index is not the end of a
@@ -400,9 +500,12 @@ export const QOL = () => {
   };
 
   return (
-    <div cclassName="block h-auto" style={{ backgroundColor: "#edf0ef" }}>
+    <div cclassName="block h-auto" style={{ backgroundColor: pagebgcolor }}>
       <Fade in={true} timeout={1000}>
-        <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
+        <h1
+          style={{ color: pagetitlecolor, fontFamily: fontType }}
+          className="p-2  text-center justify-center font-bold text-3xl mt-16"
+        >
           Quality Of Life
         </h1>
       </Fade>

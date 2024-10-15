@@ -8,6 +8,14 @@ import Economic from "Images/Economic.png";
 import Health from "Images/Health.jpg";
 import Personal from "Images/Personal.jpg";
 import { Size } from "media-query";
+import {
+  cardbgcolor,
+  textcolor,
+  pagetitlecolor,
+  cardtitlecolor,
+  pagebgcolor,
+  fontType,
+} from "components/Display/feutures";
 
 const topPageMax = 100;
 
@@ -53,7 +61,7 @@ const Images = [Environment, Community, Economic, Health, Personal];
 
 const Curtain = ({ imageIndex }) => {
   return (
-    <div className="w-screen" style={{ backgroundColor: "#cfd1d0" }}>
+    <div className="w-screen" style={{ backgroundColor: cardbgcolor }}>
       <Fade in={true} timeout={1200}>
         <img
           className="flex mx-auto rounded-md p-2 w-80 h-44"
@@ -64,21 +72,25 @@ const Curtain = ({ imageIndex }) => {
   );
 };
 
-const WelcomeContext = ({ TopBarOn, y }) => {
+const WelcomeContext = ({ y }) => {
   const size = Size();
   return (
     <div>
       {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
-        <div
-          style={{ backgroundColor: "transparent" }}
-          className="grid grid-rows-2 gap-2 p-2"
-        >
+        <div className="grid grid-rows-2 gap-2 p-2">
           <Slide
             direction="right"
             in={y < topPageMax ? true : false}
             timeout={1300}
           >
-            <p className="bg-gray-light bg-opacity-75  shadow-md rounded-md text-gray-dark  p-4">
+            <p
+              style={{
+                backgroundColor: cardbgcolor,
+                color: textcolor,
+                fontFamily: fontType,
+              }}
+              className="bg-opacity-75 shadow-md rounded-md p-4"
+            >
               In South Africa, the human development approach guides our work,
               focusing on real, meaningful freedom—not just legal rights, but
               the actual ability to make choices about our lives. This approach
@@ -99,7 +111,14 @@ const WelcomeContext = ({ TopBarOn, y }) => {
             in={y < topPageMax ? true : false}
             timeout={1300}
           >
-            <p className="bg-gray-light bg-opacity-75 shadow-md  rounded-md text-gray-dark  p-4">
+            <p
+              style={{
+                backgroundColor: cardbgcolor,
+                color: textcolor,
+                fontFamily: fontType,
+              }}
+              className="bg-opacity-75 shadow-md rounded-md p-4"
+            >
               In the South African context, this means addressing inequalities
               and enhancing quality of life by ensuring all citizens have access
               to essential services and opportunities. It involves not only
@@ -123,16 +142,20 @@ const WelcomeContext = ({ TopBarOn, y }) => {
           </Slide>
         </div>
       ) : (
-        <div
-          style={{ backgroundColor: "transparent" }}
-          className="grid grid-cols-2 gap-2 p-2"
-        >
+        <div className="grid grid-cols-2 gap-2 p-2">
           <Slide
             direction="right"
             in={y < topPageMax ? true : false}
             timeout={1300}
           >
-            <p className="bg-gray-light bg-opacity-75  shadow-md rounded-md text-gray-dark  p-4">
+            <p
+              style={{
+                backgroundColor: cardbgcolor,
+                color: textcolor,
+                fontFamily: fontType,
+              }}
+              className=" bg-opacity-75  shadow-md rounded-md  p-4"
+            >
               In South Africa, the human development approach guides our work,
               focusing on real, meaningful freedom—not just legal rights, but
               the actual ability to make choices about our lives. This approach
@@ -153,7 +176,14 @@ const WelcomeContext = ({ TopBarOn, y }) => {
             in={y < topPageMax ? true : false}
             timeout={1300}
           >
-            <p className="bg-gray-light bg-opacity-75 shadow-md  rounded-md text-gray-dark  p-4">
+            <p
+              style={{
+                backgroundColor: cardbgcolor,
+                color: textcolor,
+                fontFamily: fontType,
+              }}
+              className=" bg-opacity-75 shadow-md  rounded-md  p-4"
+            >
               In the South African context, this means addressing inequalities
               and enhancing quality of life by ensuring all citizens have access
               to essential services and opportunities. It involves not only
@@ -193,14 +223,19 @@ const Welcome2 = ({ y }) => {
           className="grid grid-rows-3 gap-1"
         >
           {HDI_Context.map((i) => (
-            <Card>
+            <Card style={{ backgroundColor: cardbgcolor }}>
               <Fade in={true} timeout={i.timeout}>
                 <div>
-                  <h1 className="flex text-center justify-center text-xl mb-1 font-bold">
+                  <h1
+                    style={{ color: cardtitlecolor, fontFamily: fontType }}
+                    className="flex text-center justify-center text-xl mb-1 font-bold"
+                  >
                     {i.title}
                   </h1>
                   <div className="grid grid-flow-col gap-1 mb-1">
-                    <p>{i.context}</p>
+                    <p style={{ color: textcolor, fontFamily: fontType }}>
+                      {i.context}
+                    </p>
                   </div>
                   <img className="rounded-md" src={i.image} />
                 </div>
@@ -216,14 +251,19 @@ const Welcome2 = ({ y }) => {
           className="grid grid-cols-3 gap-1"
         >
           {HDI_Context.map((i) => (
-            <Card>
+            <Card style={{ backgroundColor: cardbgcolor }}>
               <Fade in={true} timeout={i.timeout}>
                 <div>
-                  <h1 className="flex text-center justify-center text-xl mb-1 font-bold">
+                  <h1
+                    style={{ color: cardtitlecolor, fontFamily: fontType }}
+                    className="flex text-center justify-center text-xl mb-1 font-bold"
+                  >
                     {i.title}
                   </h1>
                   <div className="grid grid-flow-col gap-1 mb-1">
-                    <p>{i.context}</p>
+                    <p style={{ color: textcolor, fontFamily: fontType }}>
+                      {i.context}
+                    </p>
                   </div>
                   <img className="rounded-md" src={i.image} />
                 </div>
@@ -236,9 +276,8 @@ const Welcome2 = ({ y }) => {
   );
 };
 
-export const Landing = ({ setJWT }) => {
+export const Landing = () => {
   const [imageIndex, setImageIndex] = useState(0);
-
   const [TopBarOn, setTopBarOn] = useState(false);
   const [TopBarOff, setTopBarOff] = useState(false);
   const [y, setY] = useState(window.scrollY);
@@ -299,10 +338,13 @@ export const Landing = ({ setJWT }) => {
   };
 
   return (
-    <div className="block h-auto" style={{ backgroundColor: "#edf0ef" }}>
+    <div className="block h-auto" style={{ backgroundColor: pagebgcolor }}>
       <div>
         <Fade in={y < topPageMax ? true : false} timeout={1000}>
-          <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
+          <h1
+            style={{ color: pagetitlecolor, fontFamily: fontType }}
+            className="text-center justify-center font-bold text-3xl mt-16"
+          >
             What is human development ?
           </h1>
         </Fade>
