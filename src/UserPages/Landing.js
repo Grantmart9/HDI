@@ -1,14 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Button } from "primereact/button";
 import Fade from "@mui/material/Fade";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Slide from "@mui/material/Slide";
-import health from "Images/health.png";
-import dollar from "Images/dollar.png";
 import { Card } from "primereact/card";
-import Apply from "Images/Apply.png";
-import brain from "Images/brain.png";
 import Environment from "Images/Environment.jpg";
 import Community from "Images/Community.jpg";
 import Economic from "Images/Economic.png";
