@@ -1,5 +1,3 @@
-import React from "react";
-
 export const pagebgcolor = "#919191";
 export const cardbgcolor = "#5a5c5b";
 export const textcolor = "#cccaca";

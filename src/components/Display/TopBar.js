@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import { Button } from "primereact/button";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Fade from "@mui/material/Fade";
-
-import { fontType } from "components/Display/feutures";
 
 const pages = ["HOME", "REPORT", "QOL"];
 
@@ -97,12 +94,7 @@ export const TopBar = () => {
                   >
                     <div className="grid grid-flow-rown gap-3">
                       {pages.map((page) => (
-                        <a
-                          className="p-2"
-                          maxHeight="30pt"
-                          sx={{ my: 2, color: "black", display: "block" }}
-                          href={page}
-                        >
+                        <a className="p-2" href={page}>
                           <div className="text-center justify-center">
                             {page}
                           </div>
@@ -144,7 +136,7 @@ export const TopBar = () => {
               maxHeight: "5rem",
             }}
           >
-            <Container maxWidth="false">
+            <Container>
               <Toolbar disableGutters>
                 <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                   <IconButton
@@ -158,7 +150,6 @@ export const TopBar = () => {
                     <MenuIcon />
                   </IconButton>
                   <Menu
-                    id="menu-appbar"
                     anchorEl={anchorElNav}
                     anchorOrigin={{
                       vertical: "bottom",
@@ -175,11 +166,10 @@ export const TopBar = () => {
                       display: { xs: "block", md: "none" },
                     }}
                   >
-                    <div className="grid grid-flow-row gap-3">
+                    <div className="grid grid-flow-row gap-1 w-28">
                       {pages.map((page) => (
                         <a
                           className="p-2"
-                          maxHeight="30pt"
                           sx={{ my: 2, color: "black", display: "block" }}
                           href={page}
                         >
