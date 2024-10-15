@@ -1,29 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Box from "@mui/material/Box";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Button } from "primereact/button";
 import Fade from "@mui/material/Fade";
-import Grow from "@mui/material/Grow";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Slide from "@mui/material/Slide";
-import Popper from "@mui/material/Popper";
 import health from "Images/health.png";
 import dollar from "Images/dollar.png";
 import { Card } from "primereact/card";
 import Apply from "Images/Apply.png";
 import brain from "Images/brain.png";
-import development from "Images/development.jpg";
 import Environment from "Images/Environment.jpg";
 import Community from "Images/Community.jpg";
 import Economic from "Images/Economic.png";
 import Health from "Images/Health.jpg";
 import Personal from "Images/Personal.jpg";
-import graduation from "Images/graduation.jpg";
-import { SaveButtonStyle, PopoverStyle } from "components/Display/feutures";
 import { Size } from "media-query";
 
-const popupTransitionTime = 1000;
 const topPageMax = 100;
 
 const HDI_Context = [
