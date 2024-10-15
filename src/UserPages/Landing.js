@@ -93,101 +93,178 @@ const Curtain = ({ handleNext, handlePrev, imageIndex }) => {
 };
 
 const WelcomeContext = ({ TopBarOn, y }) => {
+  const size = Size();
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "120px",
-      }}
-    >
-      <div
-        style={{ backgroundColor: "transparent" }}
-        className="grid grid-cols-2 gap-2 p-2"
-      >
-        <Slide
-          direction="right"
-          in={y < topPageMax ? true : false}
-          timeout={1300}
+    <div>
+      {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
+        <div
+          style={{ backgroundColor: "transparent" }}
+          className="grid grid-rows-2 gap-2 p-2"
         >
-          <p className="bg-gray-light bg-opacity-75  shadow-md rounded-md text-gray-dark  p-4">
-            In South Africa, the human development approach guides our work,
-            focusing on real, meaningful freedom—not just legal rights, but the
-            actual ability to make choices about our lives. This approach
-            prioritizes improving well-being and expanding freedoms, placing
-            people at the heart of the analysis. It examines how political,
-            social, environmental, and economic factors shape the choices
-            available to individuals. Pioneered by Dr. Mahbub ul Haq and Amartya
-            Sen, this framework introduced the Human Development Index (HDI) to
-            measure how well people can live long, healthy lives, access
-            education, and maintain a decent standard of living. The HDI, first
-            presented in the 1990 Human Development Report, shifted focus from
-            economic size to the well-being of people, setting a global standard
-            for tracking human progress.
-          </p>
-        </Slide>
-        <Slide
-          direction="left"
-          in={y < topPageMax ? true : false}
-          timeout={1300}
+          <Slide
+            direction="right"
+            in={y < topPageMax ? true : false}
+            timeout={1300}
+          >
+            <p className="bg-gray-light bg-opacity-75  shadow-md rounded-md text-gray-dark  p-4">
+              In South Africa, the human development approach guides our work,
+              focusing on real, meaningful freedom—not just legal rights, but
+              the actual ability to make choices about our lives. This approach
+              prioritizes improving well-being and expanding freedoms, placing
+              people at the heart of the analysis. It examines how political,
+              social, environmental, and economic factors shape the choices
+              available to individuals. Pioneered by Dr. Mahbub ul Haq and
+              Amartya Sen, this framework introduced the Human Development Index
+              (HDI) to measure how well people can live long, healthy lives,
+              access education, and maintain a decent standard of living. The
+              HDI, first presented in the 1990 Human Development Report, shifted
+              focus from economic size to the well-being of people, setting a
+              global standard for tracking human progress.
+            </p>
+          </Slide>
+          <Slide
+            direction="left"
+            in={y < topPageMax ? true : false}
+            timeout={1300}
+          >
+            <p className="bg-gray-light bg-opacity-75 shadow-md  rounded-md text-gray-dark  p-4">
+              In the South African context, this means addressing inequalities
+              and enhancing quality of life by ensuring all citizens have access
+              to essential services and opportunities. It involves not only
+              expanding choices but also protecting people from threats and
+              ensuring their safety. The approach also emphasizes
+              “capabilities”—the real opportunities people have to live
+              fulfilling lives. This includes good health, education, income,
+              safety, and more. Some capabilities come from personal effort,
+              while others depend on external conditions, such as access to
+              quality education and public services. Capabilities can also be
+              influenced by birth circumstances or legal rights. Human security,
+              a key concept in this framework, focuses on protecting people from
+              threats and ensuring their safety, rather than just state
+              security. It addresses resilience and vulnerability, aiming to
+              create an environment where everyone can make choices freely and
+              safely. For example, improving human security in South Africa
+              involves addressing issues like crime and inadequate public
+              services, ensuring that all individuals can lead secure and
+              fulfilling lives.
+            </p>
+          </Slide>
+        </div>
+      ) : (
+        <div
+          style={{ backgroundColor: "transparent" }}
+          className="grid grid-cols-2 gap-2 p-2"
         >
-          <p className="bg-gray-light bg-opacity-75 shadow-md  rounded-md text-gray-dark  p-4">
-            In the South African context, this means addressing inequalities and
-            enhancing quality of life by ensuring all citizens have access to
-            essential services and opportunities. It involves not only expanding
-            choices but also protecting people from threats and ensuring their
-            safety. The approach also emphasizes “capabilities”—the real
-            opportunities people have to live fulfilling lives. This includes
-            good health, education, income, safety, and more. Some capabilities
-            come from personal effort, while others depend on external
-            conditions, such as access to quality education and public services.
-            Capabilities can also be influenced by birth circumstances or legal
-            rights. Human security, a key concept in this framework, focuses on
-            protecting people from threats and ensuring their safety, rather
-            than just state security. It addresses resilience and vulnerability,
-            aiming to create an environment where everyone can make choices
-            freely and safely. For example, improving human security in South
-            Africa involves addressing issues like crime and inadequate public
-            services, ensuring that all individuals can lead secure and
-            fulfilling lives.
-          </p>
-        </Slide>
-      </div>
+          <Slide
+            direction="right"
+            in={y < topPageMax ? true : false}
+            timeout={1300}
+          >
+            <p className="bg-gray-light bg-opacity-75  shadow-md rounded-md text-gray-dark  p-4">
+              In South Africa, the human development approach guides our work,
+              focusing on real, meaningful freedom—not just legal rights, but
+              the actual ability to make choices about our lives. This approach
+              prioritizes improving well-being and expanding freedoms, placing
+              people at the heart of the analysis. It examines how political,
+              social, environmental, and economic factors shape the choices
+              available to individuals. Pioneered by Dr. Mahbub ul Haq and
+              Amartya Sen, this framework introduced the Human Development Index
+              (HDI) to measure how well people can live long, healthy lives,
+              access education, and maintain a decent standard of living. The
+              HDI, first presented in the 1990 Human Development Report, shifted
+              focus from economic size to the well-being of people, setting a
+              global standard for tracking human progress.
+            </p>
+          </Slide>
+          <Slide
+            direction="left"
+            in={y < topPageMax ? true : false}
+            timeout={1300}
+          >
+            <p className="bg-gray-light bg-opacity-75 shadow-md  rounded-md text-gray-dark  p-4">
+              In the South African context, this means addressing inequalities
+              and enhancing quality of life by ensuring all citizens have access
+              to essential services and opportunities. It involves not only
+              expanding choices but also protecting people from threats and
+              ensuring their safety. The approach also emphasizes
+              “capabilities”—the real opportunities people have to live
+              fulfilling lives. This includes good health, education, income,
+              safety, and more. Some capabilities come from personal effort,
+              while others depend on external conditions, such as access to
+              quality education and public services. Capabilities can also be
+              influenced by birth circumstances or legal rights. Human security,
+              a key concept in this framework, focuses on protecting people from
+              threats and ensuring their safety, rather than just state
+              security. It addresses resilience and vulnerability, aiming to
+              create an environment where everyone can make choices freely and
+              safely. For example, improving human security in South Africa
+              involves addressing issues like crime and inadequate public
+              services, ensuring that all individuals can lead secure and
+              fulfilling lives.
+            </p>
+          </Slide>
+        </div>
+      )}
     </div>
   );
 };
 
 const Welcome2 = ({ y }) => {
+  const size = Size();
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "315pt",
-        marginBottom: "10pt",
-        backgroundColor: "transparent",
-      }}
-      className="grid grid-cols-3 gap-1"
-    >
-      {HDI_Context.map((i) => (
-        <Card>
-          <Fade in={true} timeout={i.timeout}>
-            <div>
-              <h1 className="flex text-center justify-center text-xl mb-1 font-bold">
-                {i.title}
-              </h1>
-              <div className="grid grid-flow-col gap-1 mb-1">
-                <p>{i.context}</p>
-              </div>
-              <img className="rounded-md" src={i.image} />
-            </div>
-          </Fade>
-        </Card>
-      ))}
+    <div>
+      {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
+        <div
+          style={{
+            backgroundColor: "transparent",
+          }}
+          className="grid grid-rows-3 gap-1"
+        >
+          {HDI_Context.map((i) => (
+            <Card>
+              <Fade in={true} timeout={i.timeout}>
+                <div>
+                  <h1 className="flex text-center justify-center text-xl mb-1 font-bold">
+                    {i.title}
+                  </h1>
+                  <div className="grid grid-flow-col gap-1 mb-1">
+                    <p>{i.context}</p>
+                  </div>
+                  <img className="rounded-md" src={i.image} />
+                </div>
+              </Fade>
+            </Card>
+          ))}
+        </div>
+      ) : (
+        <div
+          style={{
+            backgroundColor: "transparent",
+          }}
+          className="grid grid-cols-3 gap-1"
+        >
+          {HDI_Context.map((i) => (
+            <Card>
+              <Fade in={true} timeout={i.timeout}>
+                <div>
+                  <h1 className="flex text-center justify-center text-xl mb-1 font-bold">
+                    {i.title}
+                  </h1>
+                  <div className="grid grid-flow-col gap-1 mb-1">
+                    <p>{i.context}</p>
+                  </div>
+                  <img className="rounded-md" src={i.image} />
+                </div>
+              </Fade>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
 export const Landing = ({ setJWT }) => {
-  const size = Size();
   const [imageIndex, setImageIndex] = useState(0);
 
   const [TopBarOn, setTopBarOn] = useState(false);
@@ -250,17 +327,19 @@ export const Landing = ({ setJWT }) => {
   };
 
   return (
-    <div className="max-w-full">
-      <Fade in={y < topPageMax ? true : false} timeout={1000}>
-        <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
-          What is human development ?
-        </h1>
-      </Fade>
-      <div className="flex align-center justify-center p-4">
-        <Welcome2 y={y} />
+    <div className="block h-auto" style={{ backgroundColor: "#edf0ef" }}>
+      <div>
+        <Fade in={y < topPageMax ? true : false} timeout={1000}>
+          <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
+            What is human development ?
+          </h1>
+        </Fade>
       </div>
-      <div className="flex align-center justify-center">
+      <div className="flex align-center justify-center px-2.5">
         <WelcomeContext TopBarOn={TopBarOn} y={y} />
+      </div>
+      <div className="flex align-center justify-center px-4">
+        <Welcome2 y={y} />
       </div>
     </div>
   );

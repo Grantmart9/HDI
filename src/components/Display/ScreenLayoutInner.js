@@ -14,10 +14,7 @@ const Pages = [
 
 export const ScreenLayoutInner = () => {
   return (
-    <div
-      style={{ backgroundColor: "#edf0ef", fontFamily: fontType }}
-      className="rounded h-screen w-screen"
-    >
+    <div>
       <Switch>
         <Route path={Pages[0].path}>
           <Landing />
