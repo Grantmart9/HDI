@@ -56,16 +56,11 @@ const HDI_Context = [
   },
 ];
 
-const Images = [Apply, brain, health, dollar];
+const Images = [Environment, Community, Economic, Health, Personal];
 
 const Curtain = ({ handleNext, handlePrev, imageIndex }) => {
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "910pt",
-      }}
-    >
+    <div>
       <Fade in={true} timeout={1200}>
         <div
           style={{ backgroundColor: "transparent" }}
@@ -340,6 +335,9 @@ export const Landing = ({ setJWT }) => {
       </div>
       <div className="flex align-center justify-center px-4">
         <Welcome2 y={y} />
+      </div>
+      <div className="flex align-center justify-center px-4">
+        <Curtain y={y} imageIndex={imageIndex}/>
       </div>
     </div>
   );
