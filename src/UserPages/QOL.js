@@ -9,15 +9,12 @@ import Fade from "@mui/material/Fade";
 
 const HDI_groups_2 = () => {
   return (
-    <div
-      className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-      style={{ position: "absolute", top: "1600px", marginBottom: "10pt" }}
-    >
-      <div className="p-2  text-gray-light text-center font-bold text-xl">
+    <div>
+      <div className="p-2  text-gray-dark text-center font-bold text-xl">
         Why the American Human Development Index?
       </div>
-      <div className="p-2 shadow-md text-gray-light ">
-        <p className="text-center my-auto grid grid-flow-col">
+      <div className="p-2 shadow-md">
+        <p className="text-center my-auto grid grid-flow-col text-gray-dark">
           Dashboards and indexes that seek to capture and quantify concepts of
           well-being, mobility, inclusion, equity, prosperity, security, and
           sustainability are thick on the ground. What does the American Human
@@ -84,15 +81,12 @@ const HDI_groups_2 = () => {
 
 const HDI_Groups = () => {
   return (
-    <div
-      className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-      style={{ position: "absolute", top: "1286px", marginBottom: "10pt" }}
-    >
-      <div className="p-2  text-gray-light text-center font-bold text-xl">
+    <div>
+      <div className="p-2  text-gray-dark text-center font-bold text-xl">
         Why Don’t All Groups and Places Have an HDI Score?
       </div>
-      <div className="p-2 shadow-md text-gray-light ">
-        <p className="text-center my-auto grid grid-flow-col">
+      <div className="p-2 shadow-md ">
+        <p className="text-center my-auto grid grid-flow-col text-gray-dark">
           You will notice that on some maps, specific areas appear in gray, and
           that in some tables, values for certain groups or locales are missing.
           Gray areas and missing values indicate that the data for that place or
@@ -136,12 +130,9 @@ const HDI_Groups = () => {
 
 const HDI_detail = () => {
   return (
-    <div
-      className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-      style={{ position: "absolute", top: "1063px", marginBottom: "10pt" }}
-    >
+    <div>
       <div className="p-2 shadow-md text-gray-light ">
-        <p className="text-center my-auto grid grid-flow-col">
+        <p className="text-center my-auto grid grid-flow-col text-gray-dark">
           The three components are weighted equally on the premise that each is
           equally important for human well-being. In broad terms, the first
           steps for calculating the index are to compile or calculate the four
@@ -176,42 +167,71 @@ const HDI_detail = () => {
 };
 
 const HDI = () => {
+  const size = Size();
   return (
     <Fade in={true} timeout={1400}>
-      <div
-        className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-        style={{ position: "absolute", top: "830px", marginBottom: "10pt" }}
-      >
-        <div className="p-2 shadow-md text-gray-light grid grid-flow-row gap-1">
-          <div className="text-left my-auto grid grid-flow-col">
-            <img className="rounded-md" src={Brain} width={"30%"} />A Long and
-            Healthy Life is measured using life expectancy at birth. Measure of
-            America calculates life expectancy using mortality data from the New
-            Jersey Department of Health and population data from the US Census
-            Bureau. For estimates for the Newark population as a whole as well
-            as for all gender, nativity, and race/ethnicity combinations, we
-            used 2017–2021 mortality data from the New Jersey Department of
-            Health. For census tracts, we used CDC/USALEEP life expectancy
-            estimates.
-          </div>
-          <div className="text-left my-auto grid grid-flow-col">
-            <img className="rounded-md" src={Dollar} width={"30%"} />
-            Access to Knowledge is measured using two indicators: school
-            enrollment for the population 3 to 24 years of age and educational
-            degree attainment for those ages 25 and older. A one-third weight is
-            applied to the enrollment indicator and a two-thirds weight to the
-            degree attainment indicator to reflect the relative importance of
-            earning degrees as compared to attending school. Both are from the
-            US Census Bureau’s 2018–2022 American Community Survey
-          </div>
-          <div className="text-left my-auto grid grid-flow-col">
-            <img className="rounded-md" src={Health} width={"16%"} />A Decent
-            Standard of Living is measured using median earnings of all full-
-            and part-time workers ages 16 and older from the same 2018–2022
-            American Community Survey.
+      {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
+        <div>
+          <div className="p-2 shadow-md text-gray-light grid grid-flow-row gap-1">
+            <div className="text-left my-auto flex text-gray-dark mb-2">
+              A Long and Healthy Life is measured using life expectancy at
+              birth. Measure of America calculates life expectancy using
+              mortality data from the New Jersey Department of Health and
+              population data from the US Census Bureau. For estimates for the
+              Newark population as a whole as well as for all gender, nativity,
+              and race/ethnicity combinations, we used 2017–2021 mortality data
+              from the New Jersey Department of Health. For census tracts, we
+              used CDC/USALEEP life expectancy estimates.
+            </div>
+            <div className="text-left my-auto flex text-gray-dark mb-2">
+              Access to Knowledge is measured using two indicators: school
+              enrollment for the population 3 to 24 years of age and educational
+              degree attainment for those ages 25 and older. A one-third weight
+              is applied to the enrollment indicator and a two-thirds weight to
+              the degree attainment indicator to reflect the relative importance
+              of earning degrees as compared to attending school. Both are from
+              the US Census Bureau’s 2018–2022 American Community Survey
+            </div>
+            <div className="text-left my-auto flex text-gray-dark">
+              A Decent Standard of Living is measured using median earnings of
+              all full- and part-time workers ages 16 and older from the same
+              2018–2022 American Community Survey.
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div>
+          <div className="p-2 shadow-md text-gray-light grid grid-flow-row gap-1">
+            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+              <img className="rounded-md" src={Brain} width={"30%"} />A Long and
+              Healthy Life is measured using life expectancy at birth. Measure
+              of America calculates life expectancy using mortality data from
+              the New Jersey Department of Health and population data from the
+              US Census Bureau. For estimates for the Newark population as a
+              whole as well as for all gender, nativity, and race/ethnicity
+              combinations, we used 2017–2021 mortality data from the New Jersey
+              Department of Health. For census tracts, we used CDC/USALEEP life
+              expectancy estimates.
+            </div>
+            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+              <img className="rounded-md" src={Dollar} width={"30%"} />
+              Access to Knowledge is measured using two indicators: school
+              enrollment for the population 3 to 24 years of age and educational
+              degree attainment for those ages 25 and older. A one-third weight
+              is applied to the enrollment indicator and a two-thirds weight to
+              the degree attainment indicator to reflect the relative importance
+              of earning degrees as compared to attending school. Both are from
+              the US Census Bureau’s 2018–2022 American Community Survey
+            </div>
+            <div className="text-left my-auto grid grid-flow-col text-gray-dark">
+              <img className="rounded-md " src={Health} width={"16%"} />A Decent
+              Standard of Living is measured using median earnings of all full-
+              and part-time workers ages 16 and older from the same 2018–2022
+              American Community Survey.
+            </div>
+          </div>
+        </div>
+      )}
     </Fade>
   );
 };
@@ -222,14 +242,58 @@ export const QOL = () => {
 
   const Reg = () => {
     return (
-      <Fade in={true} timeout={1000}>
-        <div>
-          <div
-            className="bg-gray-dark bg-opacity-50 rounded-md mx-4"
-            style={{ position: "absolute", top: "120px", marginBottom: "10pt" }}
-          >
+      <div>
+        <Fade in={true} timeout={1000}>
+          {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
+            <div className="p-2 text-gray-light grid grid-rows-2 gap-1">
+              <p className="text-center text-gray-dark my-auto">
+                Trying to measure all the facets of the expansive concepts of
+                human development would be madness. Thus, the United Nations
+                Human Development Index as well as the adapted American Human
+                Development Index featured in this report measure just three
+                fundamental capabilities: a long and healthy life, access to
+                knowledge, and a decent standard of living (see FIGURE 1). Why
+                only three areas, and why these three in particular? People
+                around the world view them as core building blocks of a life of
+                value, freedom, and dignity. Healthy lives, good educations, and
+                decent wages are not controversial aims. In addition, these
+                foundational capabilities make possible other capabilities, such
+                as adequate housing in safe neighborhoods. They are also
+                bedrocks of human security. And from a practical perspective,
+                these are areas that one can measure comparatively easily with
+                reliable and regularly collected proxy indicators. It is
+                tempting to include indicators of a host of important
+                capabilities—such as adequate, affordable housing, food
+                security, and political participation—in a well- being index.
+                Indexes with large numbers of indicators can be tricky, however.
+                Using many indicators can lead to counting the same phenomenon
+                two or three times, to confusing results, and to a false
+                equivalence between fundamental and derivative issues. A housing
+                indicator, for instance, may be counting the same thing, to a
+                large degree, as an earnings indicator—how much money a person
+                has to pay for life’s essentials. Indexes that include a large
+                number of indicators can be difficult to explain and understand,
+                diluting their advocacy power. And including many indicators can
+                limit the places and demographic groups for which unique scores
+                can be calculated. It is important, however, to be realistic
+                about the limitations of a parsimonious index like this one. The
+                American Human Development Index is not the end of a discussion
+                on well-being; it is the start. Once disparities in basic
+                outcomes have been identified using the index and its
+                constituent parts, the critical task is to examine the why—the
+                underlying conditions like power disparities, historical
+                realities, past and present policy choices, and more that have
+                led to different outcomes for different groups of people. For
+                this exploration, a whole host of other indicators is required—
+                indicators that are featured throughout the report.
+              </p>
+              <div className="flex align-center justify-center">
+                <img className="rounded-md mt-3" src={HDI2} />
+              </div>
+            </div>
+          ) : (
             <div className="p-2 text-gray-light grid grid-cols-2 gap-1">
-              <p className="text-center my-auto">
+              <p className="text-center text-gray-dark my-auto">
                 Trying to measure all the facets of the expansive concepts of
                 human development would be madness. Thus, the United Nations
                 Human Development Index as well as the adapted American Human
@@ -274,14 +338,14 @@ export const QOL = () => {
                 <img className="rounded-md mt-3" src={HDI2} width={"50%"} />
               </div>
             </div>
-          </div>
-        </div>
-      </Fade>
+          )}
+        </Fade>
+      </div>
     );
   };
 
   return (
-    <div>
+    <div cclassName="block h-auto" style={{ backgroundColor: "#edf0ef" }}>
       <Fade in={true} timeout={1000}>
         <h1 className="p-2  text-gray-dark text-center justify-center font-bold text-3xl mt-16">
           Quality Of Life
@@ -289,12 +353,23 @@ export const QOL = () => {
       </Fade>
       <div
         style={{ backgroundColor: "#bfbfbf" }}
-        className="rounded-t-md rounded-b-md"
+        className="rounded-t-md mb-2 mx-2"
       >
         <Reg />
+      </div>
+      <div style={{ backgroundColor: "#bfbfbf" }} className="mb-2 mx-2">
         <HDI />
+      </div>
+      <div style={{ backgroundColor: "#bfbfbf" }} className="mb-2 mx-2">
         <HDI_detail />
+      </div>
+      <div style={{ backgroundColor: "#bfbfbf" }} className="mb-2 mx-2">
         <HDI_Groups />
+      </div>
+      <div
+        style={{ backgroundColor: "#bfbfbf" }}
+        className="rounded-b-md mb-2 mx-2"
+      >
         <HDI_groups_2 />
       </div>
     </div>

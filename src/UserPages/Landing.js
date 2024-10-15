@@ -58,30 +58,14 @@ const HDI_Context = [
 
 const Images = [Environment, Community, Economic, Health, Personal];
 
-const Curtain = ({ handleNext, handlePrev, imageIndex }) => {
+const Curtain = ({ imageIndex }) => {
   return (
-    <div>
+    <div className="w-screen" style={{ backgroundColor: "#cfd1d0" }}>
       <Fade in={true} timeout={1200}>
-        <div
-          style={{ backgroundColor: "transparent" }}
-          className="p-2 w-screen"
-        >
-          <div className="grid grid-flow-col gap-1">
-            <div className="flex align-center justify-center">
-              <Button sx={{ color: "black" }} onClick={handlePrev}>
-                <ArrowBackIosIcon />
-              </Button>
-            </div>
-            <div className="flex align-center justify-center">
-              <img className="rounded-md" src={Images[imageIndex]} />
-            </div>
-            <div className="flex align-center justify-center">
-              <Button sx={{ color: "black" }} onClick={handleNext}>
-                <ArrowForwardIosIcon />
-              </Button>
-            </div>
-          </div>
-        </div>
+        <img
+          className="flex mx-auto rounded-md p-2 w-80 h-44"
+          src={Images[imageIndex]}
+        />
       </Fade>
     </div>
   );
@@ -336,8 +320,8 @@ export const Landing = ({ setJWT }) => {
       <div className="flex align-center justify-center px-4">
         <Welcome2 y={y} />
       </div>
-      <div className="flex align-center justify-center px-4">
-        <Curtain y={y} imageIndex={imageIndex}/>
+      <div className="flex align-center justify-center mt-1">
+        <Curtain y={y} imageIndex={imageIndex} />
       </div>
     </div>
   );
