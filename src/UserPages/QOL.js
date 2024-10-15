@@ -245,8 +245,8 @@ export const QOL = () => {
       <div>
         <Fade in={true} timeout={1000}>
           {size === "MD" || size === "SM" || size === "XS" || size === "L" ? (
-            <div className="p-2 text-gray-light grid grid-rows-2 gap-1">
-              <p className="text-center text-gray-dark my-auto">
+            <div className="text-left text-gray-dark p-2">
+              <p className="mb-2">
                 Trying to measure all the facets of the expansive concepts of
                 human development would be madness. Thus, the United Nations
                 Human Development Index as well as the adapted American Human
@@ -255,17 +255,22 @@ export const QOL = () => {
                 knowledge, and a decent standard of living (see FIGURE 1). Why
                 only three areas, and why these three in particular? People
                 around the world view them as core building blocks of a life of
-                value, freedom, and dignity. Healthy lives, good educations, and
-                decent wages are not controversial aims. In addition, these
-                foundational capabilities make possible other capabilities, such
-                as adequate housing in safe neighborhoods. They are also
-                bedrocks of human security. And from a practical perspective,
-                these are areas that one can measure comparatively easily with
-                reliable and regularly collected proxy indicators. It is
-                tempting to include indicators of a host of important
-                capabilities—such as adequate, affordable housing, food
-                security, and political participation—in a well- being index.
-                Indexes with large numbers of indicators can be tricky, however.
+                value, freedom, and dignity.
+              </p>
+              <p className="mb-2">
+                Healthy lives, good educations, and decent wages are not
+                controversial aims. In addition, these foundational capabilities
+                make possible other capabilities, such as adequate housing in
+                safe neighborhoods. They are also bedrocks of human security.
+                And from a practical perspective, these are areas that one can
+                measure comparatively easily with reliable and regularly
+                collected proxy indicators. It is tempting to include indicators
+                of a host of important capabilities—such as adequate, affordable
+                housing, food security, and political participation—in a well-
+                being index. Indexes with large numbers of indicators can be
+                tricky, however.
+              </p>
+              <p className="mb-2">
                 Using many indicators can lead to counting the same phenomenon
                 two or three times, to confusing results, and to a false
                 equivalence between fundamental and derivative issues. A housing
@@ -275,20 +280,23 @@ export const QOL = () => {
                 number of indicators can be difficult to explain and understand,
                 diluting their advocacy power. And including many indicators can
                 limit the places and demographic groups for which unique scores
-                can be calculated. It is important, however, to be realistic
-                about the limitations of a parsimonious index like this one. The
-                American Human Development Index is not the end of a discussion
-                on well-being; it is the start. Once disparities in basic
-                outcomes have been identified using the index and its
-                constituent parts, the critical task is to examine the why—the
-                underlying conditions like power disparities, historical
-                realities, past and present policy choices, and more that have
-                led to different outcomes for different groups of people. For
-                this exploration, a whole host of other indicators is required—
-                indicators that are featured throughout the report.
+                can be calculated.
+                <p>
+                  It is important, however, to be realistic about the
+                  limitations of a parsimonious index like this one. The
+                  American Human Development Index is not the end of a
+                  discussion on well-being; it is the start. Once disparities in
+                  basic outcomes have been identified using the index and its
+                  constituent parts, the critical task is to examine the why—the
+                  underlying conditions like power disparities, historical
+                  realities, past and present policy choices, and more that have
+                  led to different outcomes for different groups of people. For
+                  this exploration, a whole host of other indicators is
+                  required— indicators that are featured throughout the report.
+                </p>
               </p>
               <div className="flex align-center justify-center">
-                <img className="rounded-md mt-3" src={HDI2} />
+                <img className="rounded-md mt-2" src={HDI2} />
               </div>
             </div>
           ) : (
