@@ -54,7 +54,7 @@ export const TopBar = () => {
         <div>
           <AppBar
             position="fixed"
-            elevation={0}
+            elevation={1}
             sx={{
               backgroundColor: "#1f1e1b",
               opacity: "100%",
@@ -129,7 +129,7 @@ export const TopBar = () => {
         <Fade in={true} timeout={1200}>
           <AppBar
             position="fixed"
-            elevation={0}
+            elevation={1}
             sx={{
               backgroundColor: "#969693",
               opacity: "100%",

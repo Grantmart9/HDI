@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Size } from "media-query";
-import Brain from "Images/brain.png";
-import Dollar from "Images/dollar.png";
-import Health from "Images/health.png";
+import Brain from "Images/Brain.png";
+import Dollar from "Images/Dollar.png";
+import Health from "Images/Health.png";
 import HDI2 from "Images/HDI3.png";
 import Fade from "@mui/material/Fade";
 import { Card } from "primereact/card";
@@ -257,78 +257,123 @@ const HDI = () => {
               className="text-left my-auto flex mb-2"
             >
               A Long and Healthy Life is measured using life expectancy at
-              birth. Measure of America calculates life expectancy using
-              mortality data from the New Jersey Department of Health and
-              population data from the US Census Bureau. For estimates for the
-              Newark population as a whole as well as for all gender, nativity,
-              and race/ethnicity combinations, we used 2017–2021 mortality data
-              from the New Jersey Department of Health. For census tracts, we
-              used CDC/USALEEP life expectancy estimates.
+              birth. Measure of South Africa calculates life expectancy using
+              mortality data from the South African Department of Health and
+              population data from Statistics South Africa. For estimates of the
+              overall population in urban areas like Johannesburg and for all
+              gender, nativity, and race/ethnicity combinations, we used
+              mortality data from 2017 to 2021 provided by the Department of
+              Health. For specific geographic areas, we relied on life
+              expectancy estimates from the South African Medical Research
+              Council.
             </p>
             <p
               style={{ color: cardtitlecolor, fontFamily: fontType }}
               className="text-left my-auto flex mb-2"
             >
               Access to Knowledge is measured using two indicators: school
-              enrollment for the population 3 to 24 years of age and educational
-              degree attainment for those ages 25 and older. A one-third weight
+              enrollment for the population aged 3 to 24 years and educational
+              degree attainment for those aged 25 and older. A one-third weight
               is applied to the enrollment indicator and a two-thirds weight to
               the degree attainment indicator to reflect the relative importance
-              of earning degrees as compared to attending school. Both are from
-              the US Census Bureau’s 2018–2022 American Community Survey
+              of earning qualifications compared to attending school. Both
+              indicators are sourced from the Statistics South Africa General
+              Household Survey and the National Learner Record Database for the
+              relevant years.
             </p>
             <p
               style={{ color: cardtitlecolor, fontFamily: fontType }}
               className="text-left my-auto flex "
             >
               A Decent Standard of Living is measured using median earnings of
-              all full- and part-time workers ages 16 and older from the same
-              2018–2022 American Community Survey.
+              all full- and part-time workers aged 15 and older, based on data
+              from the Statistics South Africa Quarterly Labour Force Survey for
+              the relevant years.
             </p>
           </Card>
         </div>
       ) : (
-        <div>
+        <div className="grid grid-flow-col gap-2">
           <Card
-            style={{ backgroundColor: cardbgcolor }}
-            className="p-2 shadow-md text-gray-light"
+            style={{
+              color: cardtitlecolor,
+              fontFamily: fontType,
+              backgroundColor: cardbgcolor,
+            }}
+            header={
+              <div className="rounded-md p-2 max-w-sm mx-auto">
+                <img className="rounded" src={Health} />
+              </div>
+            }
+            subTitle={
+              <div className="text-xl text-gray-light">
+                A Long and Healthy Life
+              </div>
+            }
           >
-            <div
-              style={{ color: cardtitlecolor, fontFamily: fontType }}
-              className="text-left my-auto grid grid-flow-col "
-            >
-              <img className="rounded-md" src={Brain} width={"30%"} />A Long and
-              Healthy Life is measured using life expectancy at birth. Measure
-              of America calculates life expectancy using mortality data from
-              the New Jersey Department of Health and population data from the
-              US Census Bureau. For estimates for the Newark population as a
-              whole as well as for all gender, nativity, and race/ethnicity
-              combinations, we used 2017–2021 mortality data from the New Jersey
-              Department of Health. For census tracts, we used CDC/USALEEP life
-              expectancy estimates.
-            </div>
-            <div
-              style={{ color: cardtitlecolor, fontFamily: fontType }}
-              className="text-left my-auto grid grid-flow-col "
-            >
-              <img className="rounded-md" src={Dollar} width={"30%"} />
+            <p className="text-left my-auto">
+              A Long and Healthy Life is measured using life expectancy at
+              birth. Measure of South Africa calculates life expectancy using
+              mortality data from the South African Department of Health and
+              population data from Statistics South Africa. For estimates of the
+              overall population in urban areas like Johannesburg and for all
+              gender, nativity, and race/ethnicity combinations, we used
+              mortality data from 2017 to 2021 provided by the Department of
+              Health. For specific geographic areas, we relied on life
+              expectancy estimates from the South African Medical Research
+              Council.
+            </p>
+          </Card>
+          <Card
+            style={{
+              color: cardtitlecolor,
+              fontFamily: fontType,
+              backgroundColor: cardbgcolor,
+            }}
+            header={
+              <div className="rounded-md p-2 max-w-sm mx-auto">
+                <img className="rounded" src={Brain} />
+              </div>
+            }
+            subTitle={
+              <div className="text-xl text-gray-light">Access to Knowledge</div>
+            }
+          >
+            <p className="text-left my-auto">
               Access to Knowledge is measured using two indicators: school
-              enrollment for the population 3 to 24 years of age and educational
-              degree attainment for those ages 25 and older. A one-third weight
+              enrollment for the population aged 3 to 24 years and educational
+              degree attainment for those aged 25 and older. A one-third weight
               is applied to the enrollment indicator and a two-thirds weight to
               the degree attainment indicator to reflect the relative importance
-              of earning degrees as compared to attending school. Both are from
-              the US Census Bureau’s 2018–2022 American Community Survey
-            </div>
-            <div
-              style={{ color: cardtitlecolor, fontFamily: fontType }}
-              className="text-left my-auto grid grid-flow-col "
-            >
-              <img className="rounded-md " src={Health} width={"16%"} />A Decent
-              Standard of Living is measured using median earnings of all full-
-              and part-time workers ages 16 and older from the same 2018–2022
-              American Community Survey.
-            </div>
+              of earning qualifications compared to attending school. Both
+              indicators are sourced from the Statistics South Africa General
+              Household Survey and the National Learner Record Database for the
+              relevant years.
+            </p>
+          </Card>
+          <Card
+            style={{
+              color: cardtitlecolor,
+              fontFamily: fontType,
+              backgroundColor: cardbgcolor,
+            }}
+            header={
+              <div className="p-2 max-w-sm mx-auto">
+                <img className="rounded" src={Dollar} />
+              </div>
+            }
+            subTitle={
+              <div className="text-xl text-gray-light">
+                A Decent Standard of Living
+              </div>
+            }
+          >
+            <p className="text-left my-auto">
+              A Decent Standard of Living is measured using median earnings of
+              all full- and part-time workers aged 15 and older, based on data
+              from the Statistics South Africa Quarterly Labour Force Survey for
+              the relevant years.
+            </p>
           </Card>
         </div>
       )}
@@ -355,62 +400,62 @@ export const QOL = () => {
                 >
                   Trying to measure all the facets of the expansive concepts of
                   human development would be madness. Thus, the United Nations
-                  Human Development Index as well as the adapted American Human
-                  Development Index featured in this report measure just three
-                  fundamental capabilities: a long and healthy life, access to
-                  knowledge, and a decent standard of living (see FIGURE 1). Why
-                  only three areas, and why these three in particular? People
-                  around the world view them as core building blocks of a life
-                  of value, freedom, and dignity.
+                  Human Development Index, along with the adapted South African
+                  Human Development Index featured in this report, measures just
+                  three fundamental capabilities: a long and healthy life,
+                  access to knowledge, and a decent standard of living (see
+                  FIGURE 1). Why only three areas, and why these three in
+                  particular? People around the world, including in South
+                  Africa, view them as core building blocks of a life of value,
+                  freedom, and dignity.
                 </p>
                 <p
                   style={{ color: cardtitlecolor, fontFamily: fontType }}
                   className="mb-2 text-left  p-2"
                 >
-                  Healthy lives, good educations, and decent wages are not
-                  controversial aims. In addition, these foundational
-                  capabilities make possible other capabilities, such as
-                  adequate housing in safe neighborhoods. They are also bedrocks
-                  of human security. And from a practical perspective, these are
-                  areas that one can measure comparatively easily with reliable
-                  and regularly collected proxy indicators. It is tempting to
-                  include indicators of a host of important capabilities—such as
-                  adequate, affordable housing, food security, and political
-                  participation—in a well- being index. Indexes with large
-                  numbers of indicators can be tricky, however.
+                  Healthy lives, quality education, and decent wages are not
+                  controversial aims. Moreover, these foundational capabilities
+                  enable other capabilities, such as adequate housing in safe
+                  communities. They are also essential to human security. From a
+                  practical perspective, these are areas that can be measured
+                  comparatively easily with reliable and regularly collected
+                  proxy indicators. It is tempting to include indicators of
+                  various important capabilities—such as affordable housing,
+                  food security, and political participation—in a well-being
+                  index. However, indexes with a large number of indicators can
+                  be complex.
                 </p>
                 <p
                   style={{ color: cardtitlecolor, fontFamily: fontType }}
                   className="mb-2 text-left p-2"
                 >
                   Using many indicators can lead to counting the same phenomenon
-                  two or three times, to confusing results, and to a false
-                  equivalence between fundamental and derivative issues. A
-                  housing indicator, for instance, may be counting the same
-                  thing, to a large degree, as an earnings indicator—how much
-                  money a person has to pay for life’s essentials. Indexes that
-                  include a large number of indicators can be difficult to
-                  explain and understand, diluting their advocacy power. And
-                  including many indicators can limit the places and demographic
-                  groups for which unique scores can be calculated.
+                  multiple times, resulting in confusing outcomes and a false
+                  equivalence between fundamental and derivative issues. For
+                  example, a housing indicator may overlap significantly with an
+                  earnings indicator—reflecting how much money a person has to
+                  pay for life’s essentials. Indexes that include a large number
+                  of indicators can be difficult to explain and understand,
+                  diluting their advocacy power. Additionally, including
+                  numerous indicators can limit the areas and demographic groups
+                  for which unique scores can be calculated.
                 </p>
                 <p
                   style={{ color: cardtitlecolor, fontFamily: fontType }}
                   className="text-left p-2"
                 >
-                  It is important, however, to be realistic about the
-                  limitations of a parsimonious index like this one. The
-                  American Human Development Index is not the end of a
-                  discussion on well-being; it is the start. Once disparities in
+                  It is crucial, however, to be realistic about the limitations
+                  of a streamlined index like this one. The South African Human
+                  Development Index is not the end of a discussion on
+                  well-being; it is just the beginning. Once disparities in
                   basic outcomes have been identified using the index and its
-                  constituent parts, the critical task is to examine the why—the
-                  underlying conditions like power disparities, historical
-                  realities, past and present policy choices, and more that have
-                  led to different outcomes for different groups of people. For
-                  this exploration, a whole host of other indicators is
-                  required— indicators that are featured throughout the report.
+                  components, the critical task is to explore the underlying
+                  reasons—such as power disparities, historical contexts, past
+                  and present policy choices, and more—that have resulted in
+                  different outcomes for various groups of people. For this
+                  exploration, a broad range of other indicators is
+                  required—indicators that are discussed throughout the report.
                 </p>
-
                 <div className="flex align-center justify-center">
                   <img className="rounded-md mt-2" src={HDI2} />
                 </div>
@@ -423,68 +468,68 @@ export const QOL = () => {
                   <div>
                     <p
                       style={{ color: cardtitlecolor, fontFamily: fontType }}
-                      className="mb-2 text-left  p-2"
+                      className="mb-2 text-left p-2"
                     >
                       Trying to measure all the facets of the expansive concepts
                       of human development would be madness. Thus, the United
-                      Nations Human Development Index as well as the adapted
-                      American Human Development Index featured in this report
-                      measure just three fundamental capabilities: a long and
-                      healthy life, access to knowledge, and a decent standard
-                      of living (see FIGURE 1). Why only three areas, and why
-                      these three in particular? People around the world view
-                      them as core building blocks of a life of value, freedom,
-                      and dignity.
+                      Nations Human Development Index, along with the adapted
+                      South African Human Development Index featured in this
+                      report, measures just three fundamental capabilities: a
+                      long and healthy life, access to knowledge, and a decent
+                      standard of living (see FIGURE 1). Why only three areas,
+                      and why these three in particular? People around the
+                      world, including in South Africa, view them as core
+                      building blocks of a life of value, freedom, and dignity.
                     </p>
                     <p
                       style={{ color: cardtitlecolor, fontFamily: fontType }}
                       className="mb-2 text-left  p-2"
                     >
-                      Healthy lives, good educations, and decent wages are not
-                      controversial aims. In addition, these foundational
-                      capabilities make possible other capabilities, such as
-                      adequate housing in safe neighborhoods. They are also
-                      bedrocks of human security. And from a practical
-                      perspective, these are areas that one can measure
-                      comparatively easily with reliable and regularly collected
-                      proxy indicators. It is tempting to include indicators of
-                      a host of important capabilities—such as adequate,
-                      affordable housing, food security, and political
-                      participation—in a well- being index. Indexes with large
-                      numbers of indicators can be tricky, however.
+                      Healthy lives, quality education, and decent wages are not
+                      controversial aims. Moreover, these foundational
+                      capabilities enable other capabilities, such as adequate
+                      housing in safe communities. They are also essential to
+                      human security. From a practical perspective, these are
+                      areas that can be measured comparatively easily with
+                      reliable and regularly collected proxy indicators. It is
+                      tempting to include indicators of various important
+                      capabilities—such as affordable housing, food security,
+                      and political participation—in a well-being index.
+                      However, indexes with a large number of indicators can be
+                      complex.
                     </p>
                     <p
                       style={{ color: cardtitlecolor, fontFamily: fontType }}
                       className="mb-2 text-left p-2"
                     >
                       Using many indicators can lead to counting the same
-                      phenomenon two or three times, to confusing results, and
-                      to a false equivalence between fundamental and derivative
-                      issues. A housing indicator, for instance, may be counting
-                      the same thing, to a large degree, as an earnings
-                      indicator—how much money a person has to pay for life’s
-                      essentials. Indexes that include a large number of
-                      indicators can be difficult to explain and understand,
-                      diluting their advocacy power. And including many
-                      indicators can limit the places and demographic groups for
+                      phenomenon multiple times, resulting in confusing outcomes
+                      and a false equivalence between fundamental and derivative
+                      issues. For example, a housing indicator may overlap
+                      significantly with an earnings indicator—reflecting how
+                      much money a person has to pay for life’s essentials.
+                      Indexes that include a large number of indicators can be
+                      difficult to explain and understand, diluting their
+                      advocacy power. Additionally, including numerous
+                      indicators can limit the areas and demographic groups for
                       which unique scores can be calculated.
                     </p>
                     <p
                       style={{ color: cardtitlecolor, fontFamily: fontType }}
                       className="text-left p-2"
                     >
-                      It is important, however, to be realistic about the
-                      limitations of a parsimonious index like this one. The
-                      American Human Development Index is not the end of a
-                      discussion on well-being; it is the start. Once
+                      It is crucial, however, to be realistic about the
+                      limitations of a streamlined index like this one. The
+                      South African Human Development Index is not the end of a
+                      discussion on well-being; it is just the beginning. Once
                       disparities in basic outcomes have been identified using
-                      the index and its constituent parts, the critical task is
-                      to examine the why—the underlying conditions like power
-                      disparities, historical realities, past and present policy
-                      choices, and more that have led to different outcomes for
-                      different groups of people. For this exploration, a whole
-                      host of other indicators is required— indicators that are
-                      featured throughout the report.
+                      the index and its components, the critical task is to
+                      explore the underlying reasons—such as power disparities,
+                      historical contexts, past and present policy choices, and
+                      more—that have resulted in different outcomes for various
+                      groups of people. For this exploration, a broad range of
+                      other indicators is required—indicators that are discussed
+                      throughout the report.
                     </p>
                   </div>
                   <div className="flex align-center justify-center">
